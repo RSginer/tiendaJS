@@ -6,5 +6,5 @@
     }
 
     Articulo.prototype.mostrar = function () {
-        return this.id + " " + this.nombre + " " + this.descripcion + " " + this.precio;
+        return "<div class='articulo' id=" + this.id + "><b>ID:</b> " + this.id + "<br> <b>NOMBRE:</b> " + this.nombre + "<br> <b>DESCRIPCION:</b> " + this.descripcion + "<br> <b>PRECIO:</b> " + this.precio + "</div>";
     }

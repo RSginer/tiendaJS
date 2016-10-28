@@ -4,7 +4,13 @@ function pintaArticulos() {
     for (var i = 0; i < mockArticulos.length; i++) {
         var a = mockArticulos[i];
         var articulo = new Articulo(a.id, a.nombre, a.descripcion, a.precio);
-        test.innerHTML += articulo.mostrar() + "<br>";
+        test.innerHTML += articulo.mostrar();
+}
+
+function anyadeEvento(articulo){
+    articulo.prototype.addEventListener('click', function(){
+        
+    });
 }
 
 }
