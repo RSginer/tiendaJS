@@ -9,10 +9,23 @@ function pintaArticulos() {
     }
 }
 
-function anyadeEvento(elemento, articulo){
-       elemento.addEventListener('click', function () {
-           
-            carritoActual.addToCart(articulo);
-            console.log(carritoActual);
-        });
+function anyadeEvento(elemento, articulo) {
+    elemento.addEventListener('click', function () {
+
+        carritoActual.addToCart(articulo);
+        console.log(carritoActual);
+    });
+}
+function cargarEventos() {
+    for (var i = 0; i < articulos.length; i++) {
+        var div = articulos[i];
+        var boton = document.getElementById(div.id + "-boton");
+        var articulo = new Articulo(
+                div.id,
+                document.getElementById(div.id + "-nombre").firstChild.data,
+                document.getElementById(div.id + "-descripcion").firstChild.data,
+                document.getElementById(div.id + "-precio").firstChild.data
+                );
+        anyadeEvento(boton, articulo);
+    }
 }
